@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9453759F690B072C82312EB76F76E3DBAB5231AD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9453759F690B072C82312EB76F76E3DBAB5231AD" : 0,
+    "23D5C70CB9EDBD1263CCB6FD676B12CCE33E93F3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "13FF2E8E-A635-4EFD-8C80-770D51ABE924",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9453759F690B072C82312EB76F76E3DBAB5231AD" : "UITools\/",
+    "23D5C70CB9EDBD1263CCB6FD676B12CCE33E93F3" : "deja-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "UITools",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "UITools\/UITools.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh.mozat.com:git-deja\/client\/deja-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "23D5C70CB9EDBD1263CCB6FD676B12CCE33E93F3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:sunnyjoe\/UITools.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9453759F690B072C82312EB76F76E3DBAB5231AD"
+    }
+  ]
+}
