@@ -12,29 +12,50 @@ class MainViewController: UIViewController {
     let tableView = UITableView()
     var funcBtns = [UIButton]()
     
+    var displayV = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.contentInset = UIEdgeInsetsMake(64, 0, 20, 0)
         
-        tableView.frame = view.bounds
+        edgesForExtendedLayout = .None
+        
+        title = "UI Library"
+        
+        tableView.contentInset = UIEdgeInsetsMake(20, 0, 20, 0)
+        
+        tableView.frame = self.view.bounds
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(FunctionTableCell.self, forCellReuseIdentifier: "FunctionTableCell")
-        view.addSubview(tableView)
+        self.view.addSubview(tableView)
         
- 
-        let shareWindow = buildOneButton("Share Window", sel: #selector(ShareWindowDidTapped))
-        funcBtns.append(shareWindow)
         
+        buildOneButton("Share Window", sel: #selector(ShareWindowDidTapped))
+        buildOneButton("Alert Hint Tips Toast Tutorial", sel: #selector(allTipsDidTapped))
+        
+        let albumBtn = buildOneButton("Album Operations", sel: #selector(albumOperation))
+        albumBtn.addSubview(displayV)
+        displayV.frame = CGRectMake(albumBtn.frame.size.width - 60 - 20, -5, 60, 60)
+        DJAblumOperation.getAlbumPoster({(img : UIImage?) -> Void in
+            self.displayV.image = img
+        })
+    
         
         tableView.reloadData()
+    }
+    
+    func allTipsDidTapped(){
+        self.navigationController?.pushViewController(AllTipsViewController(), animated: true)
+    }
+    
+    func albumOperation(){
+        DJAblumOperation.choosePicture(self)
     }
     
     func ShareWindowDidTapped(){
         let nailImageURL = "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png"
         let fbEntry = DJFBShareEntry()
-       // fbEntry.delegate = self
+        // fbEntry.delegate = self
         
         let shareEntries = [fbEntry, DJTwitterShareEntry(), DJCopyURLShareEntry(), DJInstagramShareEntry(), DJSaveImageShareEntry(), DJWXShareEntry(), DJWhatsappEntry()]
         
@@ -47,12 +68,25 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+        if let img = info[UIImagePickerControllerOriginalImage] {
+            displayV.image = img as! UIImage
+        }
+    }
+}
+
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-    func buildOneButton(name : String, sel : Selector) -> UIButton{
-        let oneBtn = UIButton(frame:CGRectMake(0, 0, view.frame.size.width, 44))
+    func buildOneButton(name : String, sel : Selector?) -> UIButton{
+        let oneBtn = UIButton(frame:CGRectMake(0, 0, view.frame.size.width, 50))
         oneBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
         oneBtn.setTitle(name, forState: .Normal)
-        oneBtn.addTarget(self, action: sel, forControlEvents: .TouchUpInside)
+        if let tmp = sel{
+            oneBtn.addTarget(self, action: tmp, forControlEvents: .TouchUpInside)
+        }
+        funcBtns.append(oneBtn)
         return oneBtn
     }
     
@@ -65,7 +99,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 44
+        return 50
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -76,7 +110,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-
+    
 }
 
 

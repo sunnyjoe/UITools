@@ -17,7 +17,7 @@
     hud.mode = MBProgressHUDModeText;
     hud.removeFromSuperViewOnHide = YES;
     hud.labelText = text;
-    hud.yOffset = 100;
+   // hud.yOffset = 100;
     [view addSubview:hud];
     [hud show:animated];
     [hud hide:animated afterDelay:1];
@@ -32,7 +32,7 @@
     hud.mode = MBProgressHUDModeText;
     hud.removeFromSuperViewOnHide = YES;
     hud.labelText = text;
-    hud.yOffset = 100;
+   // hud.yOffset = 100;
     [view addSubview:hud];
     [hud show:true];
     hud.removeFromSuperViewOnHide = true;
@@ -48,7 +48,7 @@
     hud.mode = MBProgressHUDModeText;
     hud.removeFromSuperViewOnHide = YES;
     hud.labelText = text;
-    hud.yOffset = oY;
+  //  hud.yOffset = oY;
     [view addSubview:hud];
     [hud show:true];
     hud.removeFromSuperViewOnHide = true;

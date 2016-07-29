@@ -43,5 +43,53 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+
+<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+		<string>fbapi</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>fb-messenger-api</string>
+		<string>twitter</string>
+		<string>whatsapp</string>
+		<string>weixin</string>
+	</array>
+
+<key>FacebookAppID</key>
+	<string>610039479101194</string>
+	<key>FacebookDisplayName</key>
+	<string>Deja</string>
+
+
+<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.mozat.dejafashion</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb610039479101194</string>
+				<string>dejafashion</string>
+				<string>wx4481bed8daf8c2cc</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.taplytics</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tl-fca1026d</string>
+			</array>
+		</dict>
+	</array>
+
+
+
 </dict>
 </plist>

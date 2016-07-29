@@ -22,7 +22,7 @@
     UIPasteboard *gpBoard = [UIPasteboard generalPasteboard];
     [gpBoard setString:copyText];
     
-//    [MBProgressHUD showHUDAddedTo:self.showInViewController.view text:@"Copied" animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.showInViewController.view text:@"Copied" animated:YES];
 }
 
 - (NSString *)name
