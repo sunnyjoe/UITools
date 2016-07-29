@@ -37,6 +37,15 @@
 		6D283DA21D4B2ABF00DB0E49 /* UITips.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DA11D4B2ABF00DB0E49 /* UITips.m */; };
 		6D283DA51D4B2B1600DB0E49 /* DJWarningBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DA41D4B2B1600DB0E49 /* DJWarningBanner.m */; };
 		6D283DBB1D4B5D5800DB0E49 /* KeyboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DBA1D4B5D5800DB0E49 /* KeyboardMonitor.swift */; };
+		6D283DBF1D4B5E6100DB0E49 /* DatabaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DBD1D4B5E6100DB0E49 /* DatabaseUtil.swift */; };
+		6D283DC01D4B5E6100DB0E49 /* BlockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DBE1D4B5E6100DB0E49 /* BlockDatabase.swift */; };
+		6D283DD01D4B5EAD00DB0E49 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DC31D4B5EAD00DB0E49 /* FMDatabase.m */; };
+		6D283DD11D4B5EAD00DB0E49 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DC51D4B5EAD00DB0E49 /* FMDatabaseAdditions.m */; };
+		6D283DD21D4B5EAD00DB0E49 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DC71D4B5EAD00DB0E49 /* FMDatabasePool.m */; };
+		6D283DD31D4B5EAD00DB0E49 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DC91D4B5EAD00DB0E49 /* FMDatabaseQueue.m */; };
+		6D283DD41D4B5EAD00DB0E49 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DCC1D4B5EAD00DB0E49 /* FMResultSet.m */; };
+		6D283DD51D4B5EAD00DB0E49 /* FMDatabaseAdditionsVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DCE1D4B5EAD00DB0E49 /* FMDatabaseAdditionsVariadic.swift */; };
+		6D283DD61D4B5EAD00DB0E49 /* FMDatabaseVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283DCF1D4B5EAD00DB0E49 /* FMDatabaseVariadic.swift */; };
 		6D7A63C61D49EAF7008773AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C51D49EAF7008773AB /* main.m */; };
 		6D7A63C91D49EAF7008773AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C81D49EAF7008773AB /* AppDelegate.m */; };
 		6D7A63CF1D49EAF7008773AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7A63CD1D49EAF7008773AB /* Main.storyboard */; };
@@ -107,6 +116,21 @@
 		6D283DA31D4B2B1600DB0E49 /* DJWarningBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJWarningBanner.h; sourceTree = "<group>"; };
 		6D283DA41D4B2B1600DB0E49 /* DJWarningBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJWarningBanner.m; sourceTree = "<group>"; };
 		6D283DBA1D4B5D5800DB0E49 /* KeyboardMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardMonitor.swift; sourceTree = "<group>"; };
+		6D283DBD1D4B5E6100DB0E49 /* DatabaseUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtil.swift; sourceTree = "<group>"; };
+		6D283DBE1D4B5E6100DB0E49 /* BlockDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockDatabase.swift; sourceTree = "<group>"; };
+		6D283DC21D4B5EAD00DB0E49 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		6D283DC31D4B5EAD00DB0E49 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		6D283DC41D4B5EAD00DB0E49 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		6D283DC51D4B5EAD00DB0E49 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		6D283DC61D4B5EAD00DB0E49 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		6D283DC71D4B5EAD00DB0E49 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		6D283DC81D4B5EAD00DB0E49 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		6D283DC91D4B5EAD00DB0E49 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		6D283DCA1D4B5EAD00DB0E49 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		6D283DCB1D4B5EAD00DB0E49 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		6D283DCC1D4B5EAD00DB0E49 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		6D283DCE1D4B5EAD00DB0E49 /* FMDatabaseAdditionsVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseAdditionsVariadic.swift; sourceTree = "<group>"; };
+		6D283DCF1D4B5EAD00DB0E49 /* FMDatabaseVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseVariadic.swift; sourceTree = "<group>"; };
 		6D7A63C11D49EAF7008773AB /* UITools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7A63C51D49EAF7008773AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D7A63C71D49EAF7008773AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +235,7 @@
 		6D283D781D4B218000DB0E49 /* 3rdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				6D283DC11D4B5EAD00DB0E49 /* fmdb */,
 				6D283D791D4B218000DB0E49 /* Facebook */,
 				6D283D7D1D4B218000DB0E49 /* MBProgressHUD */,
 				6D283D821D4B218000DB0E49 /* Reachability */,
@@ -280,6 +305,43 @@
 			path = EasyUITools;
 			sourceTree = "<group>";
 		};
+		6D283DBC1D4B5E6100DB0E49 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				6D283DBD1D4B5E6100DB0E49 /* DatabaseUtil.swift */,
+				6D283DBE1D4B5E6100DB0E49 /* BlockDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		6D283DC11D4B5EAD00DB0E49 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				6D283DC21D4B5EAD00DB0E49 /* FMDatabase.h */,
+				6D283DC31D4B5EAD00DB0E49 /* FMDatabase.m */,
+				6D283DC41D4B5EAD00DB0E49 /* FMDatabaseAdditions.h */,
+				6D283DC51D4B5EAD00DB0E49 /* FMDatabaseAdditions.m */,
+				6D283DC61D4B5EAD00DB0E49 /* FMDatabasePool.h */,
+				6D283DC71D4B5EAD00DB0E49 /* FMDatabasePool.m */,
+				6D283DC81D4B5EAD00DB0E49 /* FMDatabaseQueue.h */,
+				6D283DC91D4B5EAD00DB0E49 /* FMDatabaseQueue.m */,
+				6D283DCA1D4B5EAD00DB0E49 /* FMDB.h */,
+				6D283DCB1D4B5EAD00DB0E49 /* FMResultSet.h */,
+				6D283DCC1D4B5EAD00DB0E49 /* FMResultSet.m */,
+				6D283DCD1D4B5EAD00DB0E49 /* Swift extensions */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		6D283DCD1D4B5EAD00DB0E49 /* Swift extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6D283DCE1D4B5EAD00DB0E49 /* FMDatabaseAdditionsVariadic.swift */,
+				6D283DCF1D4B5EAD00DB0E49 /* FMDatabaseVariadic.swift */,
+			);
+			path = "Swift extensions";
+			sourceTree = "<group>";
+		};
 		6D7A63B81D49EAF7008773AB = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +389,7 @@
 		6D7A63DB1D49F5CF008773AB /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				6D283DBC1D4B5E6100DB0E49 /* Database */,
 				6D283DB91D4B5D5800DB0E49 /* EasyUITools */,
 				6D283D981D4B221500DB0E49 /* AblumOperations */,
 				6D283D721D4B0ADD00DB0E49 /* AlertHintTips */,
@@ -430,6 +493,7 @@
 				6D283D5D1D4B0A1200DB0E49 /* DJSaveImageShareEntry.m in Sources */,
 				6D283D951D4B218000DB0E49 /* README.md in Sources */,
 				6D283D9B1D4B221500DB0E49 /* DJAblumOperation.m in Sources */,
+				6D283DD41D4B5EAD00DB0E49 /* FMResultSet.m in Sources */,
 				6D283D5B1D4B0A1200DB0E49 /* DJFBShareEntry.m in Sources */,
 				6D283D921D4B218000DB0E49 /* README.mdown in Sources */,
 				6D283D5F1D4B0A1200DB0E49 /* DJShareWindow.m in Sources */,
@@ -437,18 +501,26 @@
 				6D7A64001D49F73E008773AB /* MainViewController.swift in Sources */,
 				6D7A64AB1D4A09E4008773AB /* NSString+Mozat.m in Sources */,
 				6D283D621D4B0A1200DB0E49 /* DJWXShareEntry.m in Sources */,
+				6D283DD21D4B5EAD00DB0E49 /* FMDatabasePool.m in Sources */,
 				6D283D361D4B062C00DB0E49 /* AllTipsViewController.swift in Sources */,
 				6D283D911D4B218000DB0E49 /* MBProgressHUD.m in Sources */,
 				6D283D5E1D4B0A1200DB0E49 /* DJShareEntry.m in Sources */,
 				6D7A63C61D49EAF7008773AB /* main.m in Sources */,
+				6D283DD01D4B5EAD00DB0E49 /* FMDatabase.m in Sources */,
 				6D283DA21D4B2ABF00DB0E49 /* UITips.m in Sources */,
 				6D283D941D4B218000DB0E49 /* Reachability.m in Sources */,
+				6D283DD11D4B5EAD00DB0E49 /* FMDatabaseAdditions.m in Sources */,
+				6D283DD51D4B5EAD00DB0E49 /* FMDatabaseAdditionsVariadic.swift in Sources */,
 				6D283D761D4B0ADD00DB0E49 /* MBProgressHUD+ShowTextHUD.m in Sources */,
 				6D283D401D4B098200DB0E49 /* UIColor+MOAdditions.m in Sources */,
 				6D283D601D4B0A1200DB0E49 /* DJTwitterShareEntry.m in Sources */,
 				6D283DBB1D4B5D5800DB0E49 /* KeyboardMonitor.swift in Sources */,
 				6D283D3F1D4B098200DB0E49 /* DJFont.m in Sources */,
+				6D283DBF1D4B5E6100DB0E49 /* DatabaseUtil.swift in Sources */,
+				6D283DD31D4B5EAD00DB0E49 /* FMDatabaseQueue.m in Sources */,
 				6D7A64AE1D4A0A23008773AB /* UIApplication+Mozat.m in Sources */,
+				6D283DC01D4B5E6100DB0E49 /* BlockDatabase.swift in Sources */,
+				6D283DD61D4B5EAD00DB0E49 /* FMDatabaseVariadic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
