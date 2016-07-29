@@ -10,6 +10,7 @@ import UIKit
 
 class AllTipsViewController: UIViewController {
     let window = TutorialWindow()
+    var oY : CGFloat = 74
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +18,11 @@ class AllTipsViewController: UIViewController {
         title = "All kinds of tips, toast"
         view.backgroundColor = UIColor.whiteColor()
         
-        var oY : CGFloat = 74
-        buildOneButton("Simple Short Tips", sel: #selector(tipOneBtnDidClicked), offset: &oY)
-        buildOneButton("TutorailWindow", sel: #selector(TutorailWindow), offset: &oY)
+        
+        buildOneButton("Simple Short Tips", sel: #selector(tipOneBtnDidClicked))
+        buildOneButton("TutorailWindow", sel: #selector(TutorailWindow))
+        buildOneButton("BannerTips", sel: #selector(bannerTip))
+        buildOneButton("BannerSlidDownTips", sel: #selector(bannerSlideDownTip))
     }
     
     func tipOneBtnDidClicked(){
@@ -31,15 +34,21 @@ class AllTipsViewController: UIViewController {
         window.makeKeyAndVisible()
     }
     
+    func bannerSlideDownTip(){
+        UITips.showSlideDownTip("bannerSlideDownTip", icon: UIImage(named:"Speaker"), duration: 2, offsetY: 64, insideParentView: self.view)
+    }
     
+    func bannerTip(){
+        UITips.showTip("bannerTip appear", icon: UIImage(named:"Speaker"), duration: 2, offsetY: 64, insideParentView: self.view)
+    }
     
-    func buildOneButton(name : String, sel : Selector, inout offset : CGFloat) -> UIButton{
-        let oneBtn = UIButton(frame:CGRectMake(0, offset, view.frame.size.width, 44))
+    func buildOneButton(name : String, sel : Selector) -> UIButton{
+        let oneBtn = UIButton(frame:CGRectMake(0, oY, view.frame.size.width, 44))
         oneBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
         oneBtn.setTitle(name, forState: .Normal)
         oneBtn.addTarget(self, action: sel, forControlEvents: .TouchUpInside)
         
-        offset += 44
+        oY += 44
         view.addSubview(oneBtn)
         return oneBtn
     }

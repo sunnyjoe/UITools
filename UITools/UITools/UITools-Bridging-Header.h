@@ -11,3 +11,4 @@
 #import "DJWhatsappEntry.h"
 #import "UIView+Mozat.h"
 #import "DJAblumOperation.h"
+#import "UITips.h"

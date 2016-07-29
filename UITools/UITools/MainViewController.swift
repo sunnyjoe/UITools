@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
             self.displayV.image = img
         })
     
-        
+    
         tableView.reloadData()
     }
     
@@ -51,6 +51,7 @@ class MainViewController: UIViewController {
     func albumOperation(){
         DJAblumOperation.choosePicture(self)
     }
+    
     
     func ShareWindowDidTapped(){
         let nailImageURL = "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png"
