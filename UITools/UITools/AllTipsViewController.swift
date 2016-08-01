@@ -18,7 +18,6 @@ class AllTipsViewController: UIViewController {
         title = "All kinds of tips, toast"
         view.backgroundColor = UIColor.whiteColor()
         
-        
         buildOneButton("Simple Short Tips", sel: #selector(tipOneBtnDidClicked))
         buildOneButton("TutorailWindow", sel: #selector(TutorailWindow))
         buildOneButton("BannerTips", sel: #selector(bannerTip))

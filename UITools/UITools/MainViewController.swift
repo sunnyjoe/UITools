@@ -40,8 +40,17 @@ class MainViewController: UIViewController {
             self.displayV.image = img
         })
     
+        buildOneButton("Photo Browser照片浏览", sel: #selector(photobrowser))
     
         tableView.reloadData()
+    }
+    
+    func photobrowser(){
+        let photoB = PhotoBrowser(frame : UIScreen.mainScreen().bounds)
+        photoB.resetDimissSelector(self, sel: #selector(handleUDismissPhotoBrowser(_:)))
+        
+        let imgUrls = ["http://d1h06o39vyn1mi.cloudfront.net/product/detail/full/bc/d2/bcd2101ec2374435559b044b238804258808691b.jpg", "http://d1h06o39vyn1mi.cloudfront.net/product/detail/full/25/5f/255f5562ecbbd49ca7cf83b1de2dfe3e5f490ea6.jpg", "http://d1h06o39vyn1mi.cloudfront.net/product/detail/full/cb/2e/cb2e47ffe739de2e21f08fc3398fa3f64bd2cee6.jpg"];
+        photoB.showPhotoBrowser(self, imageUrls: imgUrls, index: 0)
     }
     
     func allTipsDidTapped(){
@@ -66,6 +75,10 @@ class MainViewController: UIViewController {
                 //do it
             }
         })
+    }
+ 
+    func handleUDismissPhotoBrowser(index : NSNumber){
+       // bannerView.scrollToPage(index.integerValue)
     }
 }
 

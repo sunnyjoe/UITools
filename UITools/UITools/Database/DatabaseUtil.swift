@@ -6,6 +6,7 @@
 //  Copyright © 2015 Mozat. All rights reserved.
 //
 
+//based on fmdb
 import UIKit
 
 private var databaseMap = [String : Database]()
@@ -150,41 +151,6 @@ class Table<T : NSObject> {
     }
 }
 
-//class CommonTable : Table<NSDictionary> {
-//    
-//    init(name: String, primaryKey: String, dbName: String) {
-//        super.init(name: name, primaryKey: primaryKey, dbName: dbName)
-//    }
-//    
-//    override func getAllColumns() -> [String] {
-//        return [primaryKey!, BaseColumns.rawData]
-//    }
-//    
-//    override func getNormalColumns() -> [String] {
-//        return [BaseColumns.rawData]
-//    }
-//    
-//    override func convertObjToValue(obj: NSDictionary) -> [AnyObject?] {
-//        do {
-//            let data : AnyObject = try NSJSONSerialization.dataWithJSONObject(obj, options: .PrettyPrinted)
-//            return [data]
-//        }catch {
-//            return [NSNull()]
-//        }
-//    }
-//    
-//    override func parseResultSetToObj(resultSet: FMResultSet) -> NSDictionary? {
-//        do {
-//            return try NSJSONSerialization.JSONObjectWithData(resultSet.dataForColumn(BaseColumns.rawData), options: .AllowFragments) as? NSDictionary
-//        } catch {
-//            return nil
-//        }
-//    }
-//    
-//    func queryById(id : String) -> NSDictionary? {
-//        return querySingle([primaryKey!], values: [id])
-//    }
-//}
 
 func TableWith<T : NSObject>(tableName : String?, type : T.Type, primaryKey : String?, dbName : String = "Default") -> Table<T> {
     return Table<T>(name: (tableName == nil ? NSStringFromClass(T):tableName!), primaryKey : primaryKey, dbName : dbName)
@@ -194,9 +160,6 @@ func TableWith<T : NSObject>(tableName : String?, type : T.Type, primaryKey : St
     return Table<T>(name: (tableName == nil ? NSStringFromClass(T):tableName!), primaryKey : primaryKey, dbName : dbName, columns : columns)
 }
 
-//func tableWithName(name : String, primaryKey : String, dbName : String = "Default") -> CommonTable {
-//    return CommonTable(name: name, primaryKey : primaryKey, dbName: dbName)
-//}
 
 class Database : NSObject {
     
