@@ -22,8 +22,26 @@ class AllTipsViewController: UIViewController {
         buildOneButton("TutorailWindow", sel: #selector(TutorailWindow))
         buildOneButton("BannerTips", sel: #selector(bannerTip))
         buildOneButton("BannerSlidDownTips", sel: #selector(bannerSlideDownTip))
+        buildOneButton("Drow Menu", sel: #selector(drowMenuFunc))
     }
     
+    func drowMenuFunc(){
+        let directorView = DropMenuView(menus:["Function1", "Function2", "Function3"])
+        if directorView.superview != nil{
+            directorView.hideAnimation()
+            return
+        }
+        directorView.delegate = self
+        
+        if let nv = self.navigationController{
+            nv.view.addSubview(directorView)
+        }else{
+            view.addSubview(directorView)
+        }
+        
+        directorView.showAnimation()
+    }
+
     func tipOneBtnDidClicked(){
         MBProgressHUD.showHUDAddedTo(view, text: "MBProgressHUD", duration: 1)
     }
@@ -51,4 +69,11 @@ class AllTipsViewController: UIViewController {
         view.addSubview(oneBtn)
         return oneBtn
     }
+}
+
+extension AllTipsViewController : DropMenuViewDelegate{
+    func dropMenuViewDidClickIndex(dropMenuView: DropMenuView, index : Int){
+        dropMenuView.removeFromSuperview()
+    }
+    
 }
