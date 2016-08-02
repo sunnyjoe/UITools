@@ -35,4 +35,18 @@
 @property (strong, nonatomic) UIImageView *redDot2;
 @property (strong, nonatomic) UIImageView *redDot3;
 @property (strong, nonatomic) UIColor *dotColor;
+
+-(void)initDotsView:(CGRect)frame;
+
+-(void)initDotsFrame;
+-(UIImageView *)createRefreshDot;
+-(void)setDotColor:(UIColor *)dotColor;
+
+-(void)startLoadingAnimation;
+
+-(void)resetTransform;
+-(void)resetAnimation;
+
+-(void)zeroScaleDots;
+-(void)fadeAnimation:(void (^)())completionBegin;
 @end

@@ -14,10 +14,10 @@ import UIKit
 }
 
 let kDJPulltoRefreshDistance : CGFloat = 60
-let kDJRefreshDotRadius = 7
-let kDJRefreshDotMaxScale = 1.3
-let kDJDotSpacing = 8
-let kDJRefreshScrollViewBottomMargin = 30
+let kDJRefreshDotRadius : CGFloat = 7
+let kDJRefreshDotMaxScale : CGFloat = 1.3
+let kDJDotSpacing : CGFloat = 8
+let kDJRefreshScrollViewBottomMargin : CGFloat = 30
 
 class WaterfallCollectionView : UIView {
     private let collectionViewLayout = CHTCollectionViewWaterfallLayout()
@@ -77,46 +77,24 @@ extension WaterfallCollectionView{
         if offY > -kDJPulltoRefreshDistance {
             ty = -offY
         }
+        topRefreshView.transform = CGAffineTransformMakeTranslation(0, ty)
         
-        /*
- 
-         
-         float ty;
-         if (scrollView.contentOffset.y > -kDJPulltoRefreshDistance)
-         {
-         ty = - scrollView.contentOffset.y;
-         }else
-         {
-         ty = kDJPulltoRefreshDistance;
-         }
-         self.topRefreshView.transform = CGAffineTransformMakeTranslation(0, ty);
-         
-         float dotDis = kDJRefreshDotRadius + kDJDotSpacing;
-         if (scrollView.contentOffset.y >= -kDJPulltoRefreshDistance / 2)
-         {
-         [self.topRefreshView zeroScaleDots];
-         }
-         else if (scrollView.contentOffset.y > -kDJPulltoRefreshDistance + 10)
-         {
-         float scale = MIN(1 - (kDJPulltoRefreshDistance - 10 + scrollView.contentOffset.y) / (kDJPulltoRefreshDistance / 2 - 10), 1);
-         //  NSLog(@"scale is %f offset %f", scale, scrollView.contentOffset.y);
-         self.topRefreshView.redDot1.transform = CGAffineTransformMakeScale(0, 0);
-         self.topRefreshView.redDot2.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
-         self.topRefreshView.redDot3.transform = CGAffineTransformMakeScale(0, 0);
-         }
-         else if (scrollView.contentOffset.y > - kDJPulltoRefreshDistance)
-         {
-         float dotTx = dotDis * (10 - kDJPulltoRefreshDistance - scrollView.contentOffset.y) / 10;
-         self.topRefreshView.redDot1.transform = CGAffineTransformMakeTranslation(dotDis - dotTx, 0);
-         self.topRefreshView.redDot2.transform = CGAffineTransformIdentity;
-         self.topRefreshView.redDot3.transform = CGAffineTransformMakeTranslation(-dotDis + dotTx, 0);
-         }
-         else if(scrollView.contentOffset.y <= - kDJPulltoRefreshDistance)
-         {
-         [self.topRefreshView resetTransform];
-         }
-         }
-         */
+        let dotDis = kDJRefreshDotRadius + kDJDotSpacing
+        if offY >= -kDJPulltoRefreshDistance / 2 {
+            topRefreshView.zeroScaleDots()
+        }else if offY > -kDJPulltoRefreshDistance + 10 {
+            let scale = min(1 - (kDJPulltoRefreshDistance - 10 + offY) / (kDJPulltoRefreshDistance / 2 - 10), 1)
+            topRefreshView.redDot1.transform = CGAffineTransformMakeScale(0, 0)
+            topRefreshView.redDot2.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale)
+            topRefreshView.redDot3.transform = CGAffineTransformMakeScale(0, 0)
+        }else if offY > -kDJPulltoRefreshDistance {
+            let dotTx = dotDis * (10 - kDJPulltoRefreshDistance - offY) / 10
+            self.topRefreshView.redDot1.transform = CGAffineTransformMakeTranslation(dotDis - dotTx, 0)
+            self.topRefreshView.redDot2.transform = CGAffineTransformIdentity;
+            self.topRefreshView.redDot3.transform = CGAffineTransformMakeTranslation(-dotDis + dotTx, 0)
+        }else if offY <= -kDJPulltoRefreshDistance {
+            topRefreshView.resetTransform()
+        }
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
