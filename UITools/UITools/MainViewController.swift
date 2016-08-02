@@ -41,8 +41,13 @@ class MainViewController: UIViewController {
         })
     
         buildOneButton("Photo Browser照片浏览", sel: #selector(photobrowser))
+        buildOneButton("WaterfallCollectionView", sel: #selector(waterfallCollectionView))
     
         tableView.reloadData()
+    }
+    
+    func waterfallCollectionView(){
+         self.navigationController?.pushViewController(CollectionViewController(), animated: true)
     }
     
     func photobrowser(){
