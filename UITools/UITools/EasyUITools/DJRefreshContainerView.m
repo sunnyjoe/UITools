@@ -43,7 +43,7 @@ static float kDJRefreshScrollViewBottomMargin = 30;
     
     [self initDotsFrame];
 }
-
+ 
 -(void)initDotsFrame{
     self.redDot1.frame = CGRectMake(self.frame.size.width / 2 - kDJRefreshDotRadius * 3 / 2 - kDJDotSpacing, self.frame.size.height / 2, kDJRefreshDotRadius, kDJRefreshDotRadius);
     self.redDot2.frame = CGRectMake(self.frame.size.width / 2 - kDJRefreshDotRadius / 2, self.frame.size.height / 2, kDJRefreshDotRadius, kDJRefreshDotRadius);

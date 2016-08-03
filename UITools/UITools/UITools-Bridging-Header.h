@@ -18,3 +18,4 @@
 #import "FMDatabaseQueue.h"
 #import "CHTCollectionViewWaterfallLayout.h"
 #import "DJRefreshContainerView.h"
+#import "UIView+DJAnimation.h"
