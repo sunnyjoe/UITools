@@ -106,7 +106,7 @@
 		6D283F201D4F285100DB0E49 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283EF01D4F285100DB0E49 /* NVActivityIndicatorShape.swift */; };
 		6D283F211D4F285100DB0E49 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283EF21D4F285100DB0E49 /* NVActivityIndicatorView.swift */; };
 		6D283F891D4F32CC00DB0E49 /* DropMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283F881D4F32CC00DB0E49 /* DropMenuView.swift */; };
-		6D283F8E1D4F569E00DB0E49 /* DJRefreshContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283F8C1D4F569E00DB0E49 /* DJRefreshContainerView.m */; };
+		6D283F8E1D4F569E00DB0E49 /* DJRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283F8C1D4F569E00DB0E49 /* DJRefreshView.m */; };
 		6D283F931D50375E00DB0E49 /* UIView+DJAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283F921D50375E00DB0E49 /* UIView+DJAnimation.m */; };
 		6D283F951D50381200DB0E49 /* WaterfallCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283F941D50381200DB0E49 /* WaterfallCollectionView.swift */; };
 		6D283F9D1D506F3D00DB0E49 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D283F9A1D506F3D00DB0E49 /* CHTCollectionViewWaterfallLayout.m */; };
@@ -262,8 +262,8 @@
 		6D283EF11D4F285100DB0E49 /* NVActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVActivityIndicatorView.h; sourceTree = "<group>"; };
 		6D283EF21D4F285100DB0E49 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
 		6D283F881D4F32CC00DB0E49 /* DropMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropMenuView.swift; sourceTree = "<group>"; };
-		6D283F8C1D4F569E00DB0E49 /* DJRefreshContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRefreshContainerView.m; sourceTree = "<group>"; };
-		6D283F901D4F56A900DB0E49 /* DJRefreshContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJRefreshContainerView.h; sourceTree = "<group>"; };
+		6D283F8C1D4F569E00DB0E49 /* DJRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRefreshView.m; sourceTree = "<group>"; };
+		6D283F901D4F56A900DB0E49 /* DJRefreshView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJRefreshView.h; sourceTree = "<group>"; };
 		6D283F911D50375E00DB0E49 /* UIView+DJAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DJAnimation.h"; sourceTree = "<group>"; };
 		6D283F921D50375E00DB0E49 /* UIView+DJAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DJAnimation.m"; sourceTree = "<group>"; };
 		6D283F941D50381200DB0E49 /* WaterfallCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallCollectionView.swift; sourceTree = "<group>"; };
@@ -452,8 +452,8 @@
 			children = (
 				6D283F981D506F3D00DB0E49 /* CHTCollectionViewWaterfallLayout */,
 				6D283DBA1D4B5D5800DB0E49 /* KeyboardMonitor.swift */,
-				6D283F901D4F56A900DB0E49 /* DJRefreshContainerView.h */,
-				6D283F8C1D4F569E00DB0E49 /* DJRefreshContainerView.m */,
+				6D283F901D4F56A900DB0E49 /* DJRefreshView.h */,
+				6D283F8C1D4F569E00DB0E49 /* DJRefreshView.m */,
 				6D283F941D50381200DB0E49 /* WaterfallCollectionView.swift */,
 			);
 			path = EasyUITools;
@@ -907,7 +907,7 @@
 				6D283D911D4B218000DB0E49 /* MBProgressHUD.m in Sources */,
 				6D283F1C1D4F285100DB0E49 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				6D283F111D4F285100DB0E49 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
-				6D283F8E1D4F569E00DB0E49 /* DJRefreshContainerView.m in Sources */,
+				6D283F8E1D4F569E00DB0E49 /* DJRefreshView.m in Sources */,
 				6D283F0A1D4F285100DB0E49 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				6D283FA11D506FB800DB0E49 /* ViewExtensions.swift in Sources */,
 				6D283FA51D508D9900DB0E49 /* CollectionViewController.swift in Sources */,

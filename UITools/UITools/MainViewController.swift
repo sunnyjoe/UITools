@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
         })
     
         buildOneButton("Photo Browser照片浏览", sel: #selector(photobrowser))
-        buildOneButton("WaterfallCollectionView", sel: #selector(waterfallCollectionView))
+        buildOneButton("WaterfallCollectionView && 下拉刷新 加载", sel: #selector(waterfallCollectionView))
     
         tableView.reloadData()
     }
