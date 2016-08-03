@@ -19,3 +19,11 @@
 #import "CHTCollectionViewWaterfallLayout.h"
 #import "DJRefreshView.h"
 #import "UIView+DJAnimation.h"
+#import "DJReminderBannerView.h"
+
+
+
+
+
+
+

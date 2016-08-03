@@ -10,12 +10,9 @@
 #import "UIView+Mozat.h"
 #import "UIView+DJAnimation.h"
 
-static float kDJPulltoRefreshDistance = 60;
 static float kDJRefreshDotRadius = 7;
 static float kDJRefreshDotMaxScale = 1.3;
 static float kDJDotSpacing = 8;
-static float kDJRefreshScrollViewBottomMargin = 30;
-
 
 
 @implementation DJRefreshView

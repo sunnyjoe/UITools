@@ -10,19 +10,34 @@ import UIKit
 
 class AllTipsViewController: UIViewController {
     let window = TutorialWindow()
-    var oY : CGFloat = 74
+    var oY : CGFloat = 14
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = .None
         
         title = "All kinds of tips, toast"
         view.backgroundColor = UIColor.whiteColor()
         
         buildOneButton("Simple Short Tips", sel: #selector(tipOneBtnDidClicked))
         buildOneButton("TutorailWindow", sel: #selector(TutorailWindow))
-        buildOneButton("BannerTips", sel: #selector(bannerTip))
+        buildOneButton("bannerTipAppear", sel: #selector(bannerTipAppear))
         buildOneButton("BannerSlidDownTips", sel: #selector(bannerSlideDownTip))
         buildOneButton("Drow Menu", sel: #selector(drowMenuFunc))
+        buildOneButton("Reminder Banner with flash", sel: #selector(bannerWithFlash))
+        
+    }
+    
+    func bannerWithFlash(){
+        let banner = DJReminderBannerView(frame : CGRectMake(0, -30, self.view.bounds.size.width, 30))
+        view.addSubview(banner)
+        
+        banner.labelStr = "Congratulations! You earned 20 credit points!"
+        banner.bannerAnimationDownUp()
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(Double(NSEC_PER_SEC) * 1.5)), dispatch_get_main_queue()) {
+            banner.bannerAnimationInOut()
+        }
     }
     
     func drowMenuFunc(){
@@ -52,11 +67,11 @@ class AllTipsViewController: UIViewController {
     }
     
     func bannerSlideDownTip(){
-        UITips.showSlideDownTip("bannerSlideDownTip", icon: UIImage(named:"Speaker"), duration: 2, offsetY: 64, insideParentView: self.view)
+        UITips.showSlideDownTip("bannerSlideDownTip", icon: UIImage(named:"Speaker"), duration: 2, offsetY: 0, insideParentView: self.view)
     }
     
-    func bannerTip(){
-        UITips.showTip("bannerTip appear", icon: UIImage(named:"Speaker"), duration: 2, offsetY: 64, insideParentView: self.view)
+    func bannerTipAppear(){
+        UITips.showTip("bannerTip appear", icon: UIImage(named:"Speaker"), duration: 2, offsetY: 0, insideParentView: self.view)
     }
     
     func buildOneButton(name : String, sel : Selector) -> UIButton{
