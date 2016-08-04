@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
     var funcBtns = [UIButton]()
     
     var displayV = UIImageView()
+    var slideWindow : SlideWindow?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,12 @@ class MainViewController: UIViewController {
         tableView.registerClass(FunctionTableCell.self, forCellReuseIdentifier: "FunctionTableCell")
         self.view.addSubview(tableView)
         
+        buildOneButton("Camera", sel: #selector(cameraMethod))
         buildOneButton("Share Window", sel: #selector(ShareWindowDidTapped))
+        buildOneButton("Slide Window", sel: #selector(slideWindowDidTapped))
+        
+        buildOneButton("AlphabetTableView", sel: #selector(alphabetTableView))
+        
         buildOneButton("Alert Hint Tips Toast Tutorial", sel: #selector(allTipsDidTapped))
         
         let albumBtn = buildOneButton("Album Operations", sel: #selector(albumOperation))
@@ -52,6 +59,25 @@ class MainViewController: UIViewController {
         tableView.reloadData()
     }
     
+    func cameraMethod(){
+        self.navigationController?.pushViewController(CameraViewController(), animated: true)
+    }
+    
+    func alphabetTableView(){
+        let alphabetTV = AlphabetTableView(frame : CGRectMake(0, 0, view.frame.size.width, 300))
+        alphabetTV.setTheContent(["Abc", "CBC", "Def", "Lpj", "Abc", "CBC", "Def", "Lpj", "Abc", "CBC", "Def", "Lpj", "Typ", "October", "September", "Julyt", "Typ", "October", "September", "Julyt", "Typ", "October", "September", "Julyt"])
+        showViewWithContent(alphabetTV)
+       
+      //  alphabetTV.setContentSelector(self, sel: #selector(didSelectName(_:)))
+    }
+    
+    func slideWindowDidTapped(){
+        if slideWindow == nil{
+            slideWindow = SlideWindow(frame: UIScreen.mainScreen().bounds)
+        }
+        slideWindow!.showAnimation()
+    }
+    
     func scrollCategory(){
         let cateView = ScrollableCategoryView(frame : CGRectMake(0, 0, view.frame.size.width, 45), infos : ["XiaoQing", "JiaoXiaoQing", "Love", "XiaoQing", "God", "XiaoQing", "ArkXiaoQing", "XiaoQing"])
         cateView.scrollToIndex(2)
@@ -60,7 +86,7 @@ class MainViewController: UIViewController {
     }
     
     func scrollBanner(){
-        let scrollView = ScrollableBannerView(frame : CGRectMake(0, 0, view.frame.size.width, 100))
+        let scrollView = ScrollableBannerView(frame : CGRectMake(0, 0, view.frame.size.width, 200))
         
         let colours = [UIColor.redColor(), UIColor.purpleColor(), UIColor.blackColor(), UIColor.grayColor()]
         var allviews = [UIView]()
@@ -75,7 +101,7 @@ class MainViewController: UIViewController {
     }
     
     func scrollBannerTimer(){
-        let scrollView = ScrollableBannerView(frame : CGRectMake(0, 0, view.frame.size.width, 100))
+        let scrollView = ScrollableBannerView(frame : CGRectMake(0, 0, view.frame.size.width, 200))
         
         let colours = [UIColor.redColor(), UIColor.purpleColor(), UIColor.blackColor(), UIColor.grayColor()]
         var allviews = [UIView]()
@@ -97,13 +123,15 @@ class MainViewController: UIViewController {
     }
     
     func showViewWithContent(theview : UIView) {
-        let conV = UIView(frame : CGRectMake(0, 0, view.frame.size.width, max(100, theview.frame.size.height + 50)))
+        let conV = UIView(frame : view.bounds)
         conV.backgroundColor = UIColor.whiteColor()
         conV.layer.borderColor = UIColor.grayColor().CGColor
         conV.layer.borderWidth = 0.5
         view.addSubview(conV)
         
         theview.frame = CGRectMake(0, 25, theview.frame.size.width, theview.frame.size.height)
+        theview.layer.borderColor = UIColor.blueColor().CGColor
+        theview.layer.borderWidth = 1
         
         let closeBtn = UIButton(frame : CGRectMake(0, 0, 60, 20))
         conV.addSubview(closeBtn)
