@@ -25,6 +25,11 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         captureBtn.setImage(UIImage(named: "BigWhiteCamera"), forState: .Normal)
         captureBtn.addTarget(self, action: #selector(takePhotoDidPressed), forControlEvents: .TouchUpInside)
         bottomView.addSubview(captureBtn)
+        
+        let cancelBtn = UIButton(frame : CGRectMake(bottomView.frame.size.width - 50 - 15, 0, 50, bottomView.frame.size.height))
+        cancelBtn.withTitle("Cancel").withFontHeleticaMedium(15).withTitleColor(UIColor(fromHexString: "f1f1f1"))
+        cancelBtn.addTarget(self, action: #selector(cancelBtnDidTapped), forControlEvents: .TouchUpInside)
+        bottomView.addSubview(cancelBtn)
     }
     
     override func viewWillLayoutSubviews() {
@@ -42,6 +47,10 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBarHidden = false
+    }
+    
+    func cancelBtnDidTapped() {
+        navigationController?.popViewControllerAnimated(true)
     }
     
     func takePhotoDidPressed(){

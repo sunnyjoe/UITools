@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
         
         title = "UI Library"
         
-        tableView.contentInset = UIEdgeInsetsMake(20, 0, 20, 0)
+        tableView.contentInset = UIEdgeInsetsMake(20, 0, 64, 0)
         
         tableView.frame = self.view.bounds
         tableView.delegate = self
@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
         
         buildOneButton("Camera", sel: #selector(cameraMethod))
         buildOneButton("Share Window", sel: #selector(ShareWindowDidTapped))
+        buildOneButton("Scale Move Edit Image", sel: #selector(editImage))
         buildOneButton("Slide Window", sel: #selector(slideWindowDidTapped))
         
         buildOneButton("AlphabetTableView", sel: #selector(alphabetTableView))
@@ -57,6 +58,10 @@ class MainViewController: UIViewController {
         
         
         tableView.reloadData()
+    }
+    
+    func editImage(){
+        
     }
     
     func cameraMethod(){
