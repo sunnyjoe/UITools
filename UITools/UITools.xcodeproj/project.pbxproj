@@ -126,6 +126,7 @@
 		6D43FE311D52ED06008A1FC7 /* UILabel+FormattedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE2C1D52ED06008A1FC7 /* UILabel+FormattedText.swift */; };
 		6D43FE341D52EE65008A1FC7 /* DJTutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE331D52EE65008A1FC7 /* DJTutorialView.m */; };
 		6D43FE391D52F4C6008A1FC7 /* ScrollableBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE381D52F4C6008A1FC7 /* ScrollableBannerView.swift */; };
+		6D43FE3D1D52FB08008A1FC7 /* ScrollableCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE3C1D52FB08008A1FC7 /* ScrollableCategoryView.swift */; };
 		6D7A63C61D49EAF7008773AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C51D49EAF7008773AB /* main.m */; };
 		6D7A63C91D49EAF7008773AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C81D49EAF7008773AB /* AppDelegate.m */; };
 		6D7A63CF1D49EAF7008773AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7A63CD1D49EAF7008773AB /* Main.storyboard */; };
@@ -305,6 +306,7 @@
 		6D43FE321D52EE65008A1FC7 /* DJTutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTutorialView.h; sourceTree = "<group>"; };
 		6D43FE331D52EE65008A1FC7 /* DJTutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTutorialView.m; sourceTree = "<group>"; };
 		6D43FE381D52F4C6008A1FC7 /* ScrollableBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableBannerView.swift; sourceTree = "<group>"; };
+		6D43FE3C1D52FB08008A1FC7 /* ScrollableCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableCategoryView.swift; sourceTree = "<group>"; };
 		6D7A63C11D49EAF7008773AB /* UITools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7A63C51D49EAF7008773AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D7A63C71D49EAF7008773AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 				6D283F8C1D4F569E00DB0E49 /* DJRefreshView.m */,
 				6D283F941D50381200DB0E49 /* WaterfallCollectionView.swift */,
 				6D43FE0F1D52DB24008A1FC7 /* DJRangeSilderView.swift */,
+				6D43FE3C1D52FB08008A1FC7 /* ScrollableCategoryView.swift */,
 				6D43FE381D52F4C6008A1FC7 /* ScrollableBannerView.swift */,
 				6D43FE131D52E0A8008A1FC7 /* DJAlertView.h */,
 				6D43FE141D52E0A8008A1FC7 /* DJAlertView.m */,
@@ -1010,6 +1013,7 @@
 				6D283E9B1D4F26D700DB0E49 /* CollectionView.swift in Sources */,
 				6D283DBB1D4B5D5800DB0E49 /* KeyboardMonitor.swift in Sources */,
 				6D43FE2F1D52ED06008A1FC7 /* UIFont+MOAdditions.m in Sources */,
+				6D43FE3D1D52FB08008A1FC7 /* ScrollableCategoryView.swift in Sources */,
 				6D283F061D4F285100DB0E49 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				6D283D3F1D4B098200DB0E49 /* DJFont.m in Sources */,
 				6D283F031D4F285100DB0E49 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,

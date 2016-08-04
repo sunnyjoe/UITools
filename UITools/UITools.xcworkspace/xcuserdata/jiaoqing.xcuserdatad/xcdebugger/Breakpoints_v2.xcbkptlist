@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UITools/MainViewController.swift"
-            timestampString = "491976645.269011"
+            timestampString = "491985789.010315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "scrollBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,12 +298,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UITools/MainViewController.swift"
-            timestampString = "491977151.111397"
+            timestampString = "491985789.010315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "showViewWithContent(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITools/EasyUITools/ScrollableCategoryView.swift"
+            timestampString = "491985617.896007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "updateIndexView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITools/EasyUITools/ScrollableCategoryView.swift"
+            timestampString = "491985617.896007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "updateIndexView()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

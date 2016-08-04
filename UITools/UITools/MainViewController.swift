@@ -46,8 +46,17 @@ class MainViewController: UIViewController {
         
         buildOneButton("ScrollBanner", sel: #selector(scrollBanner))
         buildOneButton("ScrollBanner Timer", sel: #selector(scrollBannerTimer))
+        buildOneButton("ScrollCategory", sel: #selector(scrollCategory))
+        
         
         tableView.reloadData()
+    }
+    
+    func scrollCategory(){
+        let cateView = ScrollableCategoryView(frame : CGRectMake(0, 0, view.frame.size.width, 45), infos : ["XiaoQing", "JiaoXiaoQing", "Love", "XiaoQing", "God", "XiaoQing", "ArkXiaoQing", "XiaoQing"])
+        cateView.scrollToIndex(2)
+        
+        showViewWithContent(cateView)
     }
     
     func scrollBanner(){
