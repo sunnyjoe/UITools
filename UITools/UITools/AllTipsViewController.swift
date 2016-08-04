@@ -25,7 +25,30 @@ class AllTipsViewController: UIViewController {
         buildOneButton("BannerSlidDownTips", sel: #selector(bannerSlideDownTip))
         buildOneButton("Drow Menu", sel: #selector(drowMenuFunc))
         buildOneButton("Reminder Banner with flash", sel: #selector(bannerWithFlash))
+        buildOneButton("Alert one Cancel", sel: #selector(alertView1))
+        buildOneButton("Alert Cancel and Ok", sel: #selector(alertView2))
+    }
+    
+    func alertView1(){
+        let message = "This Facebook account has already binding to another phone number."
+        let alertView = DJAlertView(title: "Oops", message: message, cancelButtonTitle: "OK")
+        alertView.show()
         
+        //or use delegate mode from DJAlertView
+    }
+    
+    func alertView2(){
+        let disBlock : DismissBlock = {(btnIndex : Int32) -> Void in
+            if btnIndex == 1 {
+                //do someting
+            }
+        }
+        
+        let message = "This Facebook account has already binding to another phone number."
+        let alertView = DJAlertView(title: "Oops", message: message, cancelButtonTitle: "Cancel", otherButtonTitles: ["Ok"], onDismiss: disBlock, onCancel: {() -> Void in
+        })
+        alertView.show()
+        //or use delegate mode from DJAlertView
     }
     
     func bannerWithFlash(){

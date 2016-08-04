@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UITools/AllTipsViewController.swift"
-            timestampString = "491912532.072421"
+            timestampString = "491971514.783223"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "bannerWithFlash()"
             landmarkType = "5">
          </BreakpointContent>

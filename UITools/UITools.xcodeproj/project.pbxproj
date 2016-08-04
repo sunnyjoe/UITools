@@ -116,6 +116,9 @@
 		6D283FA51D508D9900DB0E49 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D283FA41D508D9900DB0E49 /* CollectionViewController.swift */; };
 		6D43FE0A1D51FC49008A1FC7 /* DJReminderBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE091D51FC49008A1FC7 /* DJReminderBannerView.m */; };
 		6D43FE101D52DB24008A1FC7 /* DJRangeSilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE0F1D52DB24008A1FC7 /* DJRangeSilderView.swift */; };
+		6D43FE171D52E0A8008A1FC7 /* DJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE141D52E0A8008A1FC7 /* DJAlertView.m */; };
+		6D43FE181D52E0A8008A1FC7 /* DJAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE161D52E0A8008A1FC7 /* DJAlertView+Block.m */; };
+		6D43FE1B1D52E188008A1FC7 /* UIImage+Mozat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE1A1D52E188008A1FC7 /* UIImage+Mozat.m */; };
 		6D7A63C61D49EAF7008773AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C51D49EAF7008773AB /* main.m */; };
 		6D7A63C91D49EAF7008773AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C81D49EAF7008773AB /* AppDelegate.m */; };
 		6D7A63CF1D49EAF7008773AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7A63CD1D49EAF7008773AB /* Main.storyboard */; };
@@ -278,6 +281,12 @@
 		6D43FE081D51FC49008A1FC7 /* DJReminderBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJReminderBannerView.h; sourceTree = "<group>"; };
 		6D43FE091D51FC49008A1FC7 /* DJReminderBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJReminderBannerView.m; sourceTree = "<group>"; };
 		6D43FE0F1D52DB24008A1FC7 /* DJRangeSilderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJRangeSilderView.swift; sourceTree = "<group>"; };
+		6D43FE131D52E0A8008A1FC7 /* DJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJAlertView.h; sourceTree = "<group>"; };
+		6D43FE141D52E0A8008A1FC7 /* DJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJAlertView.m; sourceTree = "<group>"; };
+		6D43FE151D52E0A8008A1FC7 /* DJAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DJAlertView+Block.h"; sourceTree = "<group>"; };
+		6D43FE161D52E0A8008A1FC7 /* DJAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DJAlertView+Block.m"; sourceTree = "<group>"; };
+		6D43FE191D52E188008A1FC7 /* UIImage+Mozat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mozat.h"; sourceTree = "<group>"; };
+		6D43FE1A1D52E188008A1FC7 /* UIImage+Mozat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mozat.m"; sourceTree = "<group>"; };
 		6D7A63C11D49EAF7008773AB /* UITools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7A63C51D49EAF7008773AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D7A63C71D49EAF7008773AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -326,6 +335,8 @@
 		6D283D3A1D4B093000DB0E49 /* PropertyExtension */ = {
 			isa = PBXGroup;
 			children = (
+				6D43FE191D52E188008A1FC7 /* UIImage+Mozat.h */,
+				6D43FE1A1D52E188008A1FC7 /* UIImage+Mozat.m */,
 				6D283FA01D506FB800DB0E49 /* ViewExtensions.swift */,
 				6D283F911D50375E00DB0E49 /* UIView+DJAnimation.h */,
 				6D283F921D50375E00DB0E49 /* UIView+DJAnimation.m */,
@@ -463,6 +474,10 @@
 				6D283F8C1D4F569E00DB0E49 /* DJRefreshView.m */,
 				6D283F941D50381200DB0E49 /* WaterfallCollectionView.swift */,
 				6D43FE0F1D52DB24008A1FC7 /* DJRangeSilderView.swift */,
+				6D43FE131D52E0A8008A1FC7 /* DJAlertView.h */,
+				6D43FE141D52E0A8008A1FC7 /* DJAlertView.m */,
+				6D43FE151D52E0A8008A1FC7 /* DJAlertView+Block.h */,
+				6D43FE161D52E0A8008A1FC7 /* DJAlertView+Block.m */,
 			);
 			path = EasyUITools;
 			sourceTree = "<group>";
@@ -878,6 +893,7 @@
 				6D283F161D4F285100DB0E49 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				6D283DA51D4B2B1600DB0E49 /* DJWarningBanner.m in Sources */,
 				6D283D771D4B0ADD00DB0E49 /* TutorialWindow.swift in Sources */,
+				6D43FE171D52E0A8008A1FC7 /* DJAlertView.m in Sources */,
 				6D283EFB1D4F285100DB0E49 /* EdgeInsets.swift in Sources */,
 				6D283D611D4B0A1200DB0E49 /* DJWhatsappEntry.m in Sources */,
 				6D283F951D50381200DB0E49 /* WaterfallCollectionView.swift in Sources */,
@@ -923,6 +939,7 @@
 				6D283D5E1D4B0A1200DB0E49 /* DJShareEntry.m in Sources */,
 				6D7A63C61D49EAF7008773AB /* main.m in Sources */,
 				6D283DD01D4B5EAD00DB0E49 /* FMDatabase.m in Sources */,
+				6D43FE181D52E0A8008A1FC7 /* DJAlertView+Block.m in Sources */,
 				6D283DA21D4B2ABF00DB0E49 /* UITips.m in Sources */,
 				6D283EF81D4F285100DB0E49 /* ConstraintMaker.swift in Sources */,
 				6D283D941D4B218000DB0E49 /* Reachability.m in Sources */,
@@ -966,6 +983,7 @@
 				6D283F0E1D4F285100DB0E49 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				6D283EF91D4F285100DB0E49 /* ConstraintRelation.swift in Sources */,
 				6D283EF71D4F285100DB0E49 /* ConstraintItem.swift in Sources */,
+				6D43FE1B1D52E188008A1FC7 /* UIImage+Mozat.m in Sources */,
 				6D283E951D4F26D700DB0E49 /* PhotoBrowser+HUD.swift in Sources */,
 				6D283DD31D4B5EAD00DB0E49 /* FMDatabaseQueue.m in Sources */,
 				6D7A64AE1D4A0A23008773AB /* UIApplication+Mozat.m in Sources */,

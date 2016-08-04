@@ -20,8 +20,8 @@
 #import "DJRefreshView.h"
 #import "UIView+DJAnimation.h"
 #import "DJReminderBannerView.h"
-
-
+#import "DJAlertView.h"
+#import "DJAlertView+Block.h"
 
 
 
