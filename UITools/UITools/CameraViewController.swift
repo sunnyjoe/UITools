@@ -57,6 +57,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         let afterCapture = {
             if let theImage = self.cameraView.capturedImage {
                 DJAblumOperation.saveImageToAlbum(theImage)
+                 MBProgressHUD.showHUDAddedTo(self.view, text: "Saved to ablum", animated: true)
                 // or do someting else
             }else{
                 

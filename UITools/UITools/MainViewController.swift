@@ -61,7 +61,7 @@ class MainViewController: UIViewController {
     }
     
     func editImage(){
-        
+         self.navigationController?.pushViewController(EditImageViewController(), animated: true)
     }
     
     func cameraMethod(){

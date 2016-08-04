@@ -132,6 +132,7 @@
 		6D43FE471D53218F008A1FC7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE461D53218F008A1FC7 /* CameraViewController.swift */; };
 		6D43FE491D532209008A1FC7 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE481D532209008A1FC7 /* CameraView.swift */; };
 		6D43FE4D1D53269A008A1FC7 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE4C1D53269A008A1FC7 /* EditImageViewController.swift */; };
+		6D43FE501D532715008A1FC7 /* DJScaleMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D43FE4F1D532715008A1FC7 /* DJScaleMoveView.m */; };
 		6D7A63C61D49EAF7008773AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C51D49EAF7008773AB /* main.m */; };
 		6D7A63C91D49EAF7008773AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7A63C81D49EAF7008773AB /* AppDelegate.m */; };
 		6D7A63CF1D49EAF7008773AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7A63CD1D49EAF7008773AB /* Main.storyboard */; };
@@ -317,6 +318,8 @@
 		6D43FE461D53218F008A1FC7 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6D43FE481D532209008A1FC7 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		6D43FE4C1D53269A008A1FC7 /* EditImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
+		6D43FE4E1D532715008A1FC7 /* DJScaleMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJScaleMoveView.h; sourceTree = "<group>"; };
+		6D43FE4F1D532715008A1FC7 /* DJScaleMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJScaleMoveView.m; sourceTree = "<group>"; };
 		6D7A63C11D49EAF7008773AB /* UITools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7A63C51D49EAF7008773AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D7A63C71D49EAF7008773AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -512,6 +515,8 @@
 				6D283DBA1D4B5D5800DB0E49 /* KeyboardMonitor.swift */,
 				6D283F901D4F56A900DB0E49 /* DJRefreshView.h */,
 				6D283F8C1D4F569E00DB0E49 /* DJRefreshView.m */,
+				6D43FE4E1D532715008A1FC7 /* DJScaleMoveView.h */,
+				6D43FE4F1D532715008A1FC7 /* DJScaleMoveView.m */,
 				6D43FE441D531EF0008A1FC7 /* AlphabetTableView.swift */,
 				6D43FE401D531D29008A1FC7 /* SlideWindow.swift */,
 				6D283F941D50381200DB0E49 /* WaterfallCollectionView.swift */,
@@ -989,6 +994,7 @@
 				6D283FA51D508D9900DB0E49 /* CollectionViewController.swift in Sources */,
 				6D283F1D1D4F285100DB0E49 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				6D283D5E1D4B0A1200DB0E49 /* DJShareEntry.m in Sources */,
+				6D43FE501D532715008A1FC7 /* DJScaleMoveView.m in Sources */,
 				6D7A63C61D49EAF7008773AB /* main.m in Sources */,
 				6D43FE341D52EE65008A1FC7 /* DJTutorialView.m in Sources */,
 				6D283DD01D4B5EAD00DB0E49 /* FMDatabase.m in Sources */,
