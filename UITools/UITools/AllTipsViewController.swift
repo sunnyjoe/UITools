@@ -27,6 +27,32 @@ class AllTipsViewController: UIViewController {
         buildOneButton("Reminder Banner with flash", sel: #selector(bannerWithFlash))
         buildOneButton("Alert one Cancel", sel: #selector(alertView1))
         buildOneButton("Alert Cancel and Ok", sel: #selector(alertView2))
+        buildOneButton("TutorialView", sel: #selector(tutorialView))
+    }
+    
+    func tutorialView(){
+        let tutorialView1 = DJTutorialView(frame: CGRectMake(view.frame.width / 2 - 80, view.frame.height - 170, 160, 53), direction: DJTurorialViewArrowDirectionBottom)
+        tutorialView1.label.font = DJFont.fontOfSize(14)
+        tutorialView1.setText("Click here to learn how to find clothes.")
+        view.addSubview(tutorialView1)
+        
+        
+        let tutorialView2 = DJTutorialView(frame: CGRectMake(view.frame.width / 2 - 80, 70, 160, 53), direction: DJTurorialViewArrowDirectionTop)
+        tutorialView2.label.font = DJFont.fontOfSize(14)
+        tutorialView2.setText("Click here to learn how to find clothes.")
+        view.addSubview(tutorialView2)
+        
+        
+        let tutorialView3 = DJTutorialView(frame: CGRectMake(40, 220, 100, 100), direction: DJTurorialViewArrowDirectionLeft)
+        tutorialView3.label.font = DJFont.fontOfSize(14)
+        tutorialView3.setText("Click here to learn how to find clothes.")
+        view.addSubview(tutorialView3)
+        
+        
+        let tutorialView4 = DJTutorialView(frame: CGRectMake(view.frame.width - 130, 270, 100, 100), direction: DJTurorialViewArrowDirectionRight)
+        tutorialView4.label.font = DJFont.fontOfSize(14)
+        tutorialView4.setText("Click here to learn how to find clothes.")
+        view.addSubview(tutorialView4)
     }
     
     func alertView1(){
@@ -79,7 +105,7 @@ class AllTipsViewController: UIViewController {
         
         directorView.showAnimation()
     }
-
+    
     func tipOneBtnDidClicked(){
         MBProgressHUD.showHUDAddedTo(view, text: "MBProgressHUD", duration: 1)
     }

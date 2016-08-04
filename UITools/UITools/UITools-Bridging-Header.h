@@ -22,6 +22,7 @@
 #import "DJReminderBannerView.h"
 #import "DJAlertView.h"
 #import "DJAlertView+Block.h"
+#import "DJTutorialView.h"
 
 
 
