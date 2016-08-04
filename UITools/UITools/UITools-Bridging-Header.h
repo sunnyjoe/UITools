@@ -25,7 +25,8 @@
 #import "DJTutorialView.h"
 #import "UIImage+Mozat.h"
 #import "DJScaleMoveView.h"
-
+#import "WaterProgressView.h"
+ 
 
 
 

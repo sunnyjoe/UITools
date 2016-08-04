@@ -99,14 +99,14 @@
     UIImage *clipedImage = UIGraphicsGetImageFromCurrentImageContext();// The final image.
     UIGraphicsEndImageContext();
     
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    CGContextScaleCTM(context, 1, -1);
-//    CGContextTranslateCTM(context, 0, - self.frame.size.height);
-//    CGContextSetBlendMode(context, kCGBlendModeSourceOut);
-//    CGContextDrawImage(context, self.bounds, image.CGImage);
-//    CGContextDrawImage(context, innerRect, sourceImage.CGImage);
-//    UIImage *clipedImage = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
+    //    CGContextRef context = UIGraphicsGetCurrentContext();
+    //    CGContextScaleCTM(context, 1, -1);
+    //    CGContextTranslateCTM(context, 0, - self.frame.size.height);
+    //    CGContextSetBlendMode(context, kCGBlendModeSourceOut);
+    //    CGContextDrawImage(context, self.bounds, image.CGImage);
+    //    CGContextDrawImage(context, innerRect, sourceImage.CGImage);
+    //    UIImage *clipedImage = UIGraphicsGetImageFromCurrentImageContext();
+    //    UIGraphicsEndImageContext();
     
     return clipedImage;
 }
@@ -227,6 +227,19 @@
             X -= tmpFrame.origin.x - CGRectGetMaxX(self.maskRect);
         }
     }
+    //    if (Y > yDistance|| CGRectGetMaxY(tmpFrame) < CGRectGetMaxY(self.maskRect)|| X > xDistance || CGRectGetMaxX(tmpFrame) < CGRectGetMaxX(self.maskRect)) {
+    //        if (Y > yDistance){
+    //            Y = yDistance;
+    //        }else if (CGRectGetMaxY(tmpFrame) < CGRectGetMaxY(self.maskRect)){
+    //            Y += CGRectGetMaxY(self.maskRect) - CGRectGetMaxY(tmpFrame);
+    //        }
+    //
+    //        if (X > xDistance){
+    //            X = xDistance;
+    //        }else if (CGRectGetMaxX(tmpFrame) < CGRectGetMaxX(self.maskRect)){
+    //            X += CGRectGetMaxX(self.maskRect) - CGRectGetMaxX(tmpFrame);
+    //        }
+    //    }
     return CGPointMake(X, Y);
 }
 

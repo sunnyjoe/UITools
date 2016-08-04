@@ -28,8 +28,10 @@ class AllTipsViewController: UIViewController {
         buildOneButton("Alert one Cancel", sel: #selector(alertView1))
         buildOneButton("Alert Cancel and Ok", sel: #selector(alertView2))
         buildOneButton("TutorialView", sel: #selector(tutorialView))
+       // buildOneButton("Single Menu", sel: #selector(singleMenu))
     }
     
+ 
     func tutorialView(){
         let tutorialView1 = DJTutorialView(frame: CGRectMake(view.frame.width / 2 - 80, view.frame.height - 170, 160, 53), direction: DJTurorialViewArrowDirectionBottom)
         tutorialView1.label.font = DJFont.fontOfSize(14)

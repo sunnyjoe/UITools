@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
         DJAblumOperation.getAlbumPoster({(img : UIImage?) -> Void in
             self.displayV.image = img
         })
-    
+        
         buildOneButton("Photo Browser照片浏览", sel: #selector(photobrowser))
         buildOneButton("WaterfallCollectionView && 下拉刷新 加载", sel: #selector(waterfallCollectionView))
         buildOneButton("Range SliderView", sel: #selector(rangeSliderView))
@@ -56,12 +56,21 @@ class MainViewController: UIViewController {
         buildOneButton("ScrollBanner Timer", sel: #selector(scrollBannerTimer))
         buildOneButton("ScrollCategory", sel: #selector(scrollCategory))
         
+        buildOneButton("WaterProgress", sel: #selector(waterProgress))
         
         tableView.reloadData()
     }
     
+    func waterProgress(){
+        let wp = WaterProgressView(frame: CGRectMake(20, 0, 55, 55))
+        wp.setProgress(0.6, animated: true)
+        wp.delegate = self
+        
+        showViewWithContent(wp)
+    }
+    
     func editImage(){
-         self.navigationController?.pushViewController(EditImageViewController(), animated: true)
+        self.navigationController?.pushViewController(EditImageViewController(), animated: true)
     }
     
     func cameraMethod(){
@@ -72,8 +81,8 @@ class MainViewController: UIViewController {
         let alphabetTV = AlphabetTableView(frame : CGRectMake(0, 0, view.frame.size.width, 300))
         alphabetTV.setTheContent(["Abc", "CBC", "Def", "Lpj", "Abc", "CBC", "Def", "Lpj", "Abc", "CBC", "Def", "Lpj", "Typ", "October", "September", "Julyt", "Typ", "October", "September", "Julyt", "Typ", "October", "September", "Julyt"])
         showViewWithContent(alphabetTV)
-       
-      //  alphabetTV.setContentSelector(self, sel: #selector(didSelectName(_:)))
+        
+        //  alphabetTV.setContentSelector(self, sel: #selector(didSelectName(_:)))
     }
     
     func slideWindowDidTapped(){
@@ -153,7 +162,7 @@ class MainViewController: UIViewController {
     }
     
     func waterfallCollectionView(){
-         self.navigationController?.pushViewController(CollectionViewController(), animated: true)
+        self.navigationController?.pushViewController(CollectionViewController(), animated: true)
     }
     
     func photobrowser(){
@@ -187,16 +196,20 @@ class MainViewController: UIViewController {
             }
         })
     }
- 
+    
     func handleUDismissPhotoBrowser(index : NSNumber){
-       // bannerView.scrollToPage(index.integerValue)
+        // bannerView.scrollToPage(index.integerValue)
     }
 }
 
-extension MainViewController :DJRangeSilderViewDelegate {
+extension MainViewController :DJRangeSilderViewDelegate, WaterProgressViewDelegate {
     func rangeValueDidChanged(rangeSliderView: DJRangeSilderView, lowerValue: CGFloat, higherValue: CGFloat) {
         //do something here
     }
+    
+    func waterProgressViewDidClick(waterProgressView: WaterProgressView!) {
+    }
+    
 }
 
 extension MainViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
