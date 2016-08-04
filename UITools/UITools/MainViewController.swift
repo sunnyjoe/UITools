@@ -44,22 +44,57 @@ class MainViewController: UIViewController {
         buildOneButton("WaterfallCollectionView && 下拉刷新 加载", sel: #selector(waterfallCollectionView))
         buildOneButton("Range SliderView", sel: #selector(rangeSliderView))
         
+        buildOneButton("ScrollBanner", sel: #selector(scrollBanner))
+        buildOneButton("ScrollBanner Timer", sel: #selector(scrollBannerTimer))
+        
         tableView.reloadData()
     }
     
+    func scrollBanner(){
+        let scrollView = ScrollableBannerView(frame : CGRectMake(0, 0, view.frame.size.width, 100))
+        
+        let colours = [UIColor.redColor(), UIColor.purpleColor(), UIColor.blackColor(), UIColor.grayColor()]
+        var allviews = [UIView]()
+        for one in colours{
+            let oneView = UIView(frame : CGRectMake(0, 0, 161, scrollView.frame.size.height))
+            allviews.append(oneView)
+            oneView.backgroundColor = one
+        }
+        scrollView.setScrollViews(allviews)
+        
+        showViewWithContent(scrollView)
+    }
+    
+    func scrollBannerTimer(){
+        let scrollView = ScrollableBannerView(frame : CGRectMake(0, 0, view.frame.size.width, 100))
+        
+        let colours = [UIColor.redColor(), UIColor.purpleColor(), UIColor.blackColor(), UIColor.grayColor()]
+        var allviews = [UIView]()
+        for one in colours{
+            let oneView = UIView(frame : CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height))
+            allviews.append(oneView)
+            oneView.backgroundColor = one
+        }
+        scrollView.setScrollViewFull(allviews)
+        scrollView.startTimer()
+        showViewWithContent(scrollView)
+    }
+    
     func rangeSliderView(){
-        let rangeSilderView = DJRangeSilderView(frame: CGRectMake(0, 35, view.frame.size.width, 60))
+        let rangeSilderView = DJRangeSilderView(frame: CGRectMake(0, 0, view.frame.size.width, 60))
         rangeSilderView.rangeValues = [0, 30, 50, 80, 120, 200]
         showViewWithContent(rangeSilderView)
         rangeSilderView.delegate = self
     }
     
     func showViewWithContent(theview : UIView) {
-        let conV = UIView(frame : CGRectMake(0, 0, view.frame.size.width, 100))
+        let conV = UIView(frame : CGRectMake(0, 0, view.frame.size.width, max(100, theview.frame.size.height + 50)))
         conV.backgroundColor = UIColor.whiteColor()
         conV.layer.borderColor = UIColor.grayColor().CGColor
         conV.layer.borderWidth = 0.5
         view.addSubview(conV)
+        
+        theview.frame = CGRectMake(0, 25, theview.frame.size.width, theview.frame.size.height)
         
         let closeBtn = UIButton(frame : CGRectMake(0, 0, 60, 20))
         conV.addSubview(closeBtn)
