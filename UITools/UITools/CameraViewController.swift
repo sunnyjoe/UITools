@@ -33,6 +33,17 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         cameraView.frame = view.bounds
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBarHidden = false
+    }
+    
     func takePhotoDidPressed(){
         let afterCapture = {
             if let theImage = self.cameraView.capturedImage {
@@ -41,6 +52,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             }else{
                 
             }
+            self.cameraView.switchCamera(false)
         }
         cameraView.capturePhoto(afterCapture)
     }
