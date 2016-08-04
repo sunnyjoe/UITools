@@ -26,9 +26,9 @@ class MainViewController: UIViewController {
         tableView.frame = self.view.bounds
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .None
         tableView.registerClass(FunctionTableCell.self, forCellReuseIdentifier: "FunctionTableCell")
         self.view.addSubview(tableView)
-        
         
         buildOneButton("Share Window", sel: #selector(ShareWindowDidTapped))
         buildOneButton("Alert Hint Tips Toast Tutorial", sel: #selector(allTipsDidTapped))
@@ -42,8 +42,37 @@ class MainViewController: UIViewController {
     
         buildOneButton("Photo Browser照片浏览", sel: #selector(photobrowser))
         buildOneButton("WaterfallCollectionView && 下拉刷新 加载", sel: #selector(waterfallCollectionView))
-    
+        buildOneButton("Range SliderView", sel: #selector(rangeSliderView))
+        
         tableView.reloadData()
+    }
+    
+    func rangeSliderView(){
+        let rangeSilderView = DJRangeSilderView(frame: CGRectMake(0, 35, view.frame.size.width, 60))
+        rangeSilderView.rangeValues = [0, 30, 50, 80, 120, 200]
+        showViewWithContent(rangeSilderView)
+        rangeSilderView.delegate = self
+    }
+    
+    func showViewWithContent(theview : UIView) {
+        let conV = UIView(frame : CGRectMake(0, 0, view.frame.size.width, 100))
+        conV.backgroundColor = UIColor.whiteColor()
+        conV.layer.borderColor = UIColor.grayColor().CGColor
+        conV.layer.borderWidth = 0.5
+        view.addSubview(conV)
+        
+        let closeBtn = UIButton(frame : CGRectMake(0, 0, 60, 20))
+        conV.addSubview(closeBtn)
+        closeBtn.withTitleColor(UIColor.blackColor()).withFontHeletica(15).withTitle("Close")
+        closeBtn.addTarget(self, action: #selector(closeShowView), forControlEvents: .TouchUpInside)
+        
+        conV.addSubview(theview)
+    }
+    
+    func closeShowView(btn : UIButton){
+        if let tmp = btn.superview {
+            tmp.removeFromSuperview()
+        }
     }
     
     func waterfallCollectionView(){
@@ -84,6 +113,12 @@ class MainViewController: UIViewController {
  
     func handleUDismissPhotoBrowser(index : NSNumber){
        // bannerView.scrollToPage(index.integerValue)
+    }
+}
+
+extension MainViewController :DJRangeSilderViewDelegate {
+    func rangeValueDidChanged(rangeSliderView: DJRangeSilderView, lowerValue: CGFloat, higherValue: CGFloat) {
+        //do something here
     }
 }
 

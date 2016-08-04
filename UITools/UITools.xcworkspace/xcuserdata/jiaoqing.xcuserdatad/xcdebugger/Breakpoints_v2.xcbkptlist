@@ -271,7 +271,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "Banner()"
+            landmarkName = "bannerWithFlash()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
